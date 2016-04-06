@@ -2,18 +2,29 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Assignment 0</title>
+    <style type="text/css">
+        body {
+            background-color: lavender;
+            font-family: verdana;
+            font-size: 9pt;
+        }
+    </style>
 </head>
 
 <body>
+    <center>
     <form action="/message" method="post">
+        <br><br><br><br>
+        <h3>Submit New Message</h3>
     	Email: <input type="text" name="email"><br>
     	Content: <textarea name="content"></textarea><br>
     	<input type="submit" value="Submit">
     </form>
+    <br><br><br><br>
     {{#if data}}
     <h3>My Messages</h3>
-    <table>
+    <table border="2">
     	<thead>
     		<th>Email</th>
     		<th>Content</th>
@@ -30,6 +41,7 @@
     	</tbody>
     </table>
     {{/if}}
+    </center>
 </body>
 
 </html>
